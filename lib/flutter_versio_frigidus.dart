@@ -1,7 +1,3 @@
-library flutter_versio_frigidus;
-
-/// A Calculator.
-class Calculator {
-  /// Returns [value] plus 1.
-  int addOne(int value) => value + 1;
-}
+export 'cli/cli.dart';
+export 'cli/cli_opts.dart';
+export 'core/fvf_core.dart';
