@@ -1,7 +1,4 @@
-import 'dart:io';
-
 import 'package:args/args.dart';
-
 import 'package:flutter_versio_frigidus/cli/cli_opts.dart';
 
 abstract class Cli {
@@ -15,29 +12,28 @@ abstract class Cli {
   }
 
   static void printWelcomeMessage() {
-    stdout.writeln('=========================================================');
-    stdout.writeln('  Welcome to Flutter Versio Frigidus, a simple Flutter');
-    stdout.writeln('  version manager that allows you to have a specific');
-    stdout.writeln('  Flutter version for each of your projects! By Stelynx');
-    stdout.writeln('=========================================================');
-    stdout.writeln();
+    print('=========================================================');
+    print('  Welcome to Flutter Versio Frigidus, a simple Flutter');
+    print('  version manager that allows you to have a specific');
+    print('  Flutter version for each of your projects! By Stelynx');
+    print('=========================================================');
+    print('');
   }
 
   static void showUsage() {
     printWelcomeMessage();
-    stdout.writeln('Usage:');
-    stdout.writeln('\t--freeze\t\tSave current Flutter version');
-    stdout.writeln('\t--freeze-revision\tSave current Flutter revision');
-    stdout
-        .writeln('\t--restore\t\tCheckout freezed Flutter version / revision');
-    stdout.writeln();
-    stdout.writeln(
+    print('Usage:');
+    print('\t--freeze\t\tSave current Flutter version');
+    print('\t--freeze-revision\tSave current Flutter revision');
+    print('\t--restore\t\tCheckout freezed Flutter version / revision');
+    print('');
+    print(
         'Open-source software costs valuable time not spent with family and friends. Consider supporting Stelynx developers');
-    stdout.writeln();
-    stdout.writeln('=========================================================');
+    print('');
+    print('=========================================================');
   }
 
   static void showDoneMessage() {
-    stdout.writeln('Thanks for using Flutter Versio Frigidus.\n');
+    print('Thanks for using Flutter Versio Frigidus.\n');
   }
 }

@@ -92,8 +92,7 @@ Available flags are presented in the following table.
   </tr>
 </table>
 
-## Additional information
+## Contributing
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+This tool is pretty self-content, although if you have any problems, questions,
+further enhancement ideas, please fill free to file an issue or even a pull request.
