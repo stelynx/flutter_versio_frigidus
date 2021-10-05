@@ -14,7 +14,7 @@ jobs:
           java-version: "12.x"
       - uses: subosito/flutter-action@v1
         with:
-          channel: "master"
+          channel: "stable"
       - uses: stelynx/dart-full-coverage@v1.0.5
         with:
           package: flutter_versio_frigidus
