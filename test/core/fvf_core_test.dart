@@ -5,17 +5,17 @@ import 'package:test/test.dart';
 
 void main() {
   setUp(() {
-    final File f = File(FvfCore.fvfConfigFile);
+    final File f = File(FvfCore.fvfFile);
     if (f.existsSync()) f.deleteSync();
     expect(f.existsSync(), isFalse);
   });
 
   setUpAll(() {
-    expect(File(FvfCore.fvfConfigFile).existsSync(), isFalse);
+    expect(File(FvfCore.fvfFile).existsSync(), isFalse);
   });
 
   tearDownAll(() {
-    final File f = File(FvfCore.fvfConfigFile);
+    final File f = File(FvfCore.fvfFile);
     if (f.existsSync()) f.deleteSync();
     expect(f.existsSync(), isFalse);
   });
@@ -25,7 +25,7 @@ void main() {
       final bool success = FvfCore.freeze();
       expect(success, isTrue);
 
-      final File f = File(FvfCore.fvfConfigFile);
+      final File f = File(FvfCore.fvfFile);
       expect(f.existsSync(), isTrue);
     });
   });
@@ -35,16 +35,16 @@ void main() {
       final bool success = FvfCore.freezeRevision();
       expect(success, isTrue);
 
-      final File f = File(FvfCore.fvfConfigFile);
+      final File f = File(FvfCore.fvfFile);
       expect(f.existsSync(), isTrue);
     });
   });
 
   group('restore', () {
     test(
-      'should restore a Flutter version to version specified in ${FvfCore.fvfConfigFile}',
+      'should restore a Flutter version to version specified in ${FvfCore.fvfFile}',
       () {
-        final File f = File(FvfCore.fvfConfigFile);
+        final File f = File(FvfCore.fvfFile);
         f.writeAsStringSync('2.5.2');
         expect(f.existsSync(), isTrue);
 

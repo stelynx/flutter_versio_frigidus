@@ -1,7 +1,9 @@
 import 'package:args/args.dart';
 import 'package:flutter_versio_frigidus/cli/cli_opts.dart';
 
+/// Auxiliary functions for command-line interaction.
 abstract class Cli {
+  /// Parses command line [args].
   static ArgResults parseCliArguments(List<String> args) {
     final ArgParser parser = ArgParser()
       ..addFlag(CliOpts.freeze)
@@ -11,6 +13,7 @@ abstract class Cli {
     return parser.parse(args);
   }
 
+  /// Prints welcome message.
   static void printWelcomeMessage() {
     print('=========================================================');
     print('  Welcome to Flutter Versio Frigidus, a simple Flutter');
@@ -20,6 +23,7 @@ abstract class Cli {
     print('');
   }
 
+  /// Prints help to the command line.
   static void showUsage() {
     printWelcomeMessage();
     print('Usage:');
@@ -33,6 +37,7 @@ abstract class Cli {
     print('=========================================================');
   }
 
+  /// Prints thanks message after successful operation.
   static void showDoneMessage() {
     print('Thanks for using Flutter Versio Frigidus.\n');
   }

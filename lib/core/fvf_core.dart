@@ -1,8 +1,11 @@
 import 'dart:io';
 
+/// Core functionality of Flutter Versio Frigidus.
 abstract class FvfCore {
-  static const String fvfConfigFile = 'flutter_versio_frigidus';
+  /// Path to file where version or revision is stored.
+  static const String fvfFile = 'flutter_versio_frigidus';
 
+  /// Saves current Flutter version to [fvfFile].
   static bool freeze() {
     final ProcessResult result = Process.runSync('flutter', ['--version']);
     if (result.exitCode != 0) {
@@ -11,15 +14,16 @@ abstract class FvfCore {
     }
 
     final RegExp re = RegExp(r'Flutter (.*?) ');
-    final String flutterVersion = re.firstMatch(result.stdout).group(1);
+    final String flutterVersion = re.firstMatch(result.stdout)!.group(1)!;
 
-    final File configFile = File(fvfConfigFile);
+    final File configFile = File(fvfFile);
     configFile.writeAsStringSync(flutterVersion, mode: FileMode.write);
 
-    print('Flutter version $flutterVersion saved to $fvfConfigFile');
+    print('Flutter version $flutterVersion saved to $fvfFile');
     return true;
   }
 
+  /// Saves current Flutter revision to [fvfFile].
   static bool freezeRevision() {
     final ProcessResult result = Process.runSync('flutter', ['--version']);
     if (result.exitCode != 0) {
@@ -28,19 +32,20 @@ abstract class FvfCore {
     }
 
     final RegExp re = RegExp(r'revision (.*?) ');
-    final String flutterVersion = re.firstMatch(result.stdout).group(1);
+    final String flutterVersion = re.firstMatch(result.stdout)!.group(1)!;
 
-    final File configFile = File(fvfConfigFile);
+    final File configFile = File(fvfFile);
     configFile.writeAsStringSync(flutterVersion, mode: FileMode.write);
 
-    print('Flutter revision $flutterVersion saved to $fvfConfigFile');
+    print('Flutter revision $flutterVersion saved to $fvfFile');
     return true;
   }
 
+  /// Sets current Flutter version to the one saved in [fvfFile].
   static bool restore() {
-    final File f = File(fvfConfigFile);
+    final File f = File(fvfFile);
     if (!f.existsSync()) {
-      print('$fvfConfigFile missing, cannot restore');
+      print('$fvfFile missing, cannot restore');
       return false;
     }
     final String flutterVersion = f.readAsStringSync();

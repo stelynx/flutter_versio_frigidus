@@ -46,7 +46,7 @@ Require this package in your application's `pubspec.yaml` in `dev_dependencies` 
 
 ```yaml
 dev_dependencies:
-  flutter_versio_frigidus: ^1.0.0
+  flutter_versio_frigidus: ^1.1.0
 ```
 
 ## Usage

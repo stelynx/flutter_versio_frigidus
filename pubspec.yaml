@@ -1,10 +1,10 @@
 name: flutter_versio_frigidus
 description: A tool for easily selecting Flutter version on project basis
-version: 1.0.0
+version: 1.1.0
 repository: https://github.com/stelynx/flutter_versio_frigidus
 
 environment:
-  sdk: ">=2.0.0 <3.0.0"
+  sdk: ">=2.12.0 <3.0.0"
 
 dependencies:
   args: ^2.3.0
