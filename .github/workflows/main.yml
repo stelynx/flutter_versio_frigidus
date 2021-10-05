@@ -17,7 +17,7 @@ jobs:
           channel: "master"
       - uses: stelynx/dart-full-coverage@v1.0.5
         with:
-          package: scidash
+          package: flutter_versio_frigidus
       - run: flutter pub get
       - run: flutter analyze
       - run: flutter test --coverage .

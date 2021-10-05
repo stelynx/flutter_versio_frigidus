@@ -9,10 +9,10 @@ _Flutter Versio Frigidus (latin for Flutter Version Freeze) helps developers wor
 were created using different Flutter versions to easily switch between Flutter
 versions based on their projects._ 🥳
 
-[![Pub Version](https://img.shields.io/pub/v/adr?color=%233dc6fd&logo=flutter&logoColor=%233dc6fd)](https://pub.dev/packages/flutter_versio_frigidus)
+[![Pub Version](https://img.shields.io/pub/v/flutter_versio_frigidus?color=%233dc6fd&logo=flutter&logoColor=%233dc6fd)](https://pub.dev/packages/flutter_versio_frigidus)
 ![Lint & Test](https://github.com/stelynx/flutter_versio_frigidus/workflows/Lint%20&%20Test/badge.svg)
 [![codecov.io](https://codecov.io/gh/stelynx/flutter_versio_frigidus/branch/master/graphs/badge.svg)](https://codecov.io/gh/stelynx/flutter_versio_frigidus/branch/master)
-![GitHub Repo stars](https://img.shields.io/github/stars/stelynx/flutter_versio_frigidus?color=gold&logo=github&style=plastic)
+![GitHub Repo stars](https://img.shields.io/github/stars/stelynx/flutter_versio_frigidus?color=gold&logo=github)
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/stelynx/flutter_versio_frigidus)
 [![GitHub](https://img.shields.io/github/license/stelynx/flutter_versio_frigidus)](LICENSE)
 
